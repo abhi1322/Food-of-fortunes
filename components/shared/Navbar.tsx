@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Input } from "../ui/input";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import {
   NavigationMenu,
@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
+import Image from "next/image";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -63,7 +64,17 @@ const Navbar = () => {
         </div>
 
         <div className="flex gap-4">
-          <Input type="text" placeholder="Search" />
+          <div className="flex gap-1">
+            <Input type="text" placeholder="Search" />
+            <Button>
+              <img
+                width="24"
+                height="24"
+                src="https://img.icons8.com/forma-bold/24/ffffff/search.png"
+                alt="search"
+              />
+            </Button>
+          </div>
           <Link
             href={""}
             className={buttonVariants({

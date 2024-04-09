@@ -26,26 +26,29 @@ export default function Home() {
           onMouseLeave={autoplayPlugin.play}
         >
           <CarouselContent>
-            <CarouselItem>
+            <CarouselItem className="relative">
               <img
                 className="w-dvw h-[60vh] object-cover"
                 src="https://images.unsplash.com/photo-1688217170693-e821c6e18d72?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="cl"
               />
+              <div className="absolute bottom-0 py-8 px-16 bg-gradient-to-t from-black to-transparent opacity-65 text-white flex w-full h-2/4 "></div>
             </CarouselItem>
-            <CarouselItem>
+            <CarouselItem className="relative">
               <img
                 className="w-dvw h-[60vh] object-cover"
                 src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="cl"
               />
+              <div className="absolute bottom-0 py-8 px-16 bg-gradient-to-t from-black to-transparent opacity-65 text-white flex w-full h-2/4 "></div>
             </CarouselItem>
-            <CarouselItem>
+            <CarouselItem className="relative">
               <img
                 className="w-dvw h-[60vh] object-cover"
                 src="https://images.unsplash.com/photo-1608502669656-a24fa8036853?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="cl"
               />
+              <div className="absolute bottom-0 py-8 px-16 bg-gradient-to-t from-black to-transparent opacity-65 text-white flex w-full h-2/4 "></div>
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious className="left-10" />
