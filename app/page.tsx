@@ -75,7 +75,7 @@ export default function Home() {
             See more
           </a>
         </div>
-        <div className="flex gap-4 w-full overflow-x-auto overflow-y-hidden">
+        <div className="flex p-4 gap-4 w-full overflow-x-auto overflow-y-hidden scrollbar-hide">
           {BestSellingProducts.map((product, index) => (
             <Card
               id={index.toString()}
@@ -126,7 +126,7 @@ export default function Home() {
             See more
           </a>
         </div>
-        <div className="flex gap-4 w-full h-full overflow-x-auto overflow-y-hidden">
+        <div className="flex gap-4 p-4 w-full h-full overflow-x-auto overflow-y-hidden scrollbar-hide">
           {BestSellingProducts.map((product, index) => (
             <Card
               id={index.toString()}
@@ -147,7 +147,7 @@ export default function Home() {
             See more
           </a>
         </div>
-        <div className="flex gap-4 w-full overflow-x-auto overflow-y-hidden">
+        <div className="flex gap-4 h-full p-4 w-full overflow-x-auto overflow-y-hidden scrollbar-hide">
           {BestSellingProducts.map((product, index) => (
             <Card
               id={index.toString()}

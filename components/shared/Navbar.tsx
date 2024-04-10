@@ -58,13 +58,13 @@ const Navbar = () => {
     <nav className=" px-8 pb-4 border-b">
       <div className="flex justify-between items-center py-4">
         <div>
-          <a href="/" className="font-bold text-xl">
+          <a href="/" className="font-bold text-xl text-green-700">
             Food of Fortuens
           </a>
         </div>
 
         <div className="flex gap-4">
-          <div className="flex gap-1">
+          <div className="hidden sm:inline-flex gap-1">
             <Input type="text" placeholder="Search" />
             <Button>
               <img
@@ -96,9 +96,23 @@ const Navbar = () => {
               height="24"
               src="https://img.icons8.com/sf-regular-filled/48/ffffff/shopping-cart.png"
               alt="shopping-cart"
-            />{" "}
-            My Cart
+            />
+            <p className="hidden sm:inline-flex">My Cart</p>
           </a>
+        </div>
+      </div>
+
+      <div className=" w-full sm:hidden mt-1 mb-2">
+        <div className="flex gap-1 justify-between">
+          <Input type="text" placeholder="Search" />
+          <Button>
+            <img
+              width="24"
+              height="24"
+              src="https://img.icons8.com/forma-bold/24/ffffff/search.png"
+              alt="search"
+            />
+          </Button>
         </div>
       </div>
 
@@ -122,21 +136,23 @@ const Navbar = () => {
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenu>
-
-          <li className="border-b-2 border-green-600">
-            <a href="/">Home</a>
-          </li>
-          <li className="hover:border-b-2 border-green-600">
-            <a href="/">About Us</a>
-          </li>
-          <li className="hover:border-b-2 border-green-600">
-            <a href="/">Contact Us</a>
-          </li>
-          <li className="hover:border-b-2 border-green-600">
-            <a href="/">Shop Location</a>
-          </li>
+          <div className="hidden gap-8  md:inline-flex">
+            <li className="border-b-2 border-green-600">
+              <a href="/">Home</a>
+            </li>
+            <li className="hover:border-b-2 border-green-600">
+              <a href="/">About Us</a>
+            </li>
+            <li className="hover:border-b-2 border-green-600">
+              <a href="/">Contact Us</a>
+            </li>
+            <li className="hover:border-b-2 border-green-600">
+              <a href="/">Shop Location</a>
+            </li>
+          </div>
         </ul>
-        <div className="flex">
+
+        <div className="hidden md:inline-flex">
           <img
             width="36"
             height="36"
@@ -150,6 +166,35 @@ const Navbar = () => {
             alt="facebook-circled"
           />
         </div>
+
+        <button className=" md:hidden hover:scale-105 active:scale-95">
+          <svg
+            width="24px"
+            height="24px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 18L20 18"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M4 12L20 12"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M4 6L20 6"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
       </div>
     </nav>
   );
