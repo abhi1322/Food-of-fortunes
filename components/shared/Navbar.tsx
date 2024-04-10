@@ -56,7 +56,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="z-50 top-0 bg-white sticky px-8 pb-4 border-b overflow-x-clip">
+    <nav className="z-50 top-0 bg-white sticky px-8 pb-4 border-b overflow-x-clip overflow-y">
       <div className="flex justify-between items-center py-4">
         <div>
           <a href="/" className="font-bold text-xl text-green-700">
