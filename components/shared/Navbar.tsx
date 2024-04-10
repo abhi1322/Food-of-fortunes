@@ -89,7 +89,7 @@ const Navbar = () => {
           <a
             href={""}
             className={buttonVariants({
-              className: "bg-green-600 hover:bg-green-700 px-8",
+              className: "bg-green-600 hover:bg-green-700 sm:px-8",
             })}
           >
             <img
