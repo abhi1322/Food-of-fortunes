@@ -18,7 +18,7 @@ export default function Home() {
   const autoplayPlugin = Autoplay({ delay: 2000, stopOnInteraction: true });
 
   return (
-    <main>
+    <main className="">
       <div className="w-full">
         <Carousel
           plugins={[autoplayPlugin]}
@@ -66,7 +66,7 @@ export default function Home() {
         ))}
       </section>
       {/* best selling section */}
-      <section className="flex sm:w-3/4 pl-4 flex-col mx-auto">
+      <section className="flex lg:w-3/4 pl-4 flex-col mx-auto">
         <div className="flex justify-between items-start mb-8">
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Best Selling
@@ -88,9 +88,9 @@ export default function Home() {
       </section>
 
       {/* Banner section */}
-      <div className="flex sm:w-3/4 pl-4 pt-20 mx-auto gap-8 text-white ">
-        <div className="relative w-2/3 p-8 bg-yellow-400 h-64  rounded-2xl overflow-hidden">
-          <p className="font-bold text-4xl capitalize mb-4">
+      <div className="flex flex-col sm:flex-row lg:w-3/4 pl-4 pt-20 mx-auto gap-2 text-white ">
+        <div className="relative md:w-full p-8 bg-yellow-400 h-64  rounded-2xl overflow-hidden">
+          <p className="font-bold text-2xl lg:text-4xl capitalize mb-4">
             Special Deals on <br /> herbs & Spices
           </p>
           <Button className="transition-all hover:scale-105 ">Check Now</Button>
@@ -100,24 +100,24 @@ export default function Home() {
           <img
             src="/images/banner-img.png"
             alt="banner-img"
-            className="absolute top-1 right-1 "
+            className="absolute bottom-0 -right-8 h-[15vh] sm:h-[20vh]"
           />
         </div>
-        <div className="relative w-1/3 h-64 bg-[#4A90C3] p-8 rounded-2xl overflow-hidden">
-          <p className="font-bold text-4xl capitalize mb-4">
+        <div className="relative h-64 bg-[#4A90C3] p-8 rounded-2xl overflow-hidden">
+          <p className="font-bold text-2xl lg:text-4xl capitalize mb-4 z-50">
             Check other <br /> exciting deals on snacks
           </p>
-          <Button className="transition-all hover:scale-105">Check Now</Button>
           <img
             src="/images/snack.png"
             alt="banner-img"
-            className="absolute top-0 right-0 "
+            className="absolute bottom-0 right-0 h-[20vh]  "
           />
+          <Button className="transition-all hover:scale-105 z-50">Check Now</Button>
         </div>
       </div>
 
       {/* best grocery section */}
-      <section className="flex flex-col sm:w-3/4 pl-4 mx-auto mt-20">
+      <section className="flex flex-col lg:w-3/4 pl-4 mx-auto mt-20">
         <div className="flex justify-between items-start mb-8">
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Grocery
@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </section>
       {/* best grocery section */}
-      <section className="flex flex-col sm:w-3/4 pl-4 mx-auto mt-20">
+      <section className="flex flex-col lg:w-3/4 pl-4 mx-auto mt-20">
         <div className="flex justify-between items-start mb-8">
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Herbs & Spices

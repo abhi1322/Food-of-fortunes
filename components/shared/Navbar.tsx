@@ -56,7 +56,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="z-50 top-0 bg-white sticky px-8 pb-4 border-b">
+    <nav className="z-50 top-0 bg-white sticky px-8 pb-4 border-b overflow-x-clip">
       <div className="flex justify-between items-center py-4">
         <div>
           <a href="/" className="font-bold text-xl text-green-700">
@@ -203,7 +203,7 @@ const Navbar = () => {
 
       <div
         className={`z-50 absolute bg-white h-[100vh] w-3/4 py-16 right-0 ${
-          isOpen ? "translate-x-0" : "translate-x-full"
+          isOpen ? "translate-x-0 " : "translate-x-full"
         } top-0 flex flex-col justify-between items-center border-l border-gray-300 transition-all duration-300 delay-150`}
       >
         <div className="w-full flex justify-end px-8 ">
