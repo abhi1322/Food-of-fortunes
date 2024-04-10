@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "../ui/input";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
@@ -13,7 +13,6 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
-import Image from "next/image";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -54,8 +53,10 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className=" px-8 pb-4 border-b">
+    <nav className="z-50 top-0 bg-white sticky px-8 pb-4 border-b">
       <div className="flex justify-between items-center py-4">
         <div>
           <a href="/" className="font-bold text-xl text-green-700">
@@ -167,7 +168,10 @@ const Navbar = () => {
           />
         </div>
 
-        <button className=" md:hidden hover:scale-105 active:scale-95">
+        <button
+          className=" md:hidden hover:scale-105 active:scale-95"
+          onClick={() => setIsOpen(true)}
+        >
           <svg
             width="24px"
             height="24px"
@@ -195,6 +199,61 @@ const Navbar = () => {
             />
           </svg>
         </button>
+      </div>
+
+      <div
+        className={`z-50 absolute bg-white h-[100vh] w-3/4 py-16 right-0 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        } top-0 flex flex-col justify-between items-center border-l border-gray-300 transition-all duration-300 delay-150`}
+      >
+        <div className="w-full flex justify-end px-8 ">
+          <button className="" onClick={() => setIsOpen(false)}>
+            <svg
+              fill="#000000"
+              height="24px"
+              width="24px"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 490 490"
+              preserveAspectRatio="xMinYMin meet"
+              className="hover:scale-105 active:scale-95 cursor-pointer"
+            >
+              <polygon points="456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 " />
+            </svg>
+          </button>
+        </div>
+        <ul className="flex flex-col gap-8 w-3/4 flex-1 mt-20 items-end">
+          <li className=" border-green-600 hover:text-green-500 hover:scale-105 transition-all">
+            <a href="/">Home</a>
+          </li>
+          <li className=" hover:text-green-500 hover:scale-105 transition-all">
+            <a href="/">About Us</a>
+          </li>
+          <li className=" hover:text-green-500 hover:scale-105 transition-all">
+            <a href="/">Contact Us</a>
+          </li>
+          <li className=" hover:text-green-500 hover:scale-105 transition-all">
+            <a href="/">Shop Location</a>
+          </li>
+        </ul>
+        <div className="flex gap-4 items-end">
+          <img
+            width="36"
+            height="36"
+            src="https://img.icons8.com/sf-regular/48/B4B4B4/instagram-new.png"
+            alt="instagram-new"
+            className="hover:scale-105 active:scale-95 cursor-pointer"
+          />
+          <img
+            width="36"
+            height="36"
+            src="https://img.icons8.com/sf-regular/48/B4B4B4/facebook-circled.png"
+            alt="facebook-circled"
+            className="hover:scale-105 active:scale-95 cursor-pointer"
+          />
+        </div>
       </div>
     </nav>
   );
