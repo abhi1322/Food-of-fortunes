@@ -71,7 +71,7 @@ export default function Home() {
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Best Selling
           </h6>
-          <a href="/" className="text-green-600 underline">
+          <a href="/" className="text-green-600 underline pr-4 sm:pr-0">
             See more
           </a>
         </div>
@@ -112,7 +112,9 @@ export default function Home() {
             alt="banner-img"
             className="absolute bottom-0 right-0 h-[20vh]  "
           />
-          <Button className="transition-all hover:scale-105 z-50">Check Now</Button>
+          <Button className="transition-all hover:scale-105 z-50">
+            Check Now
+          </Button>
         </div>
       </div>
 
@@ -122,7 +124,7 @@ export default function Home() {
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Grocery
           </h6>
-          <a href="/" className="text-green-600 underline">
+          <a href="/" className="text-green-600 underline pr-4 sm:pr-0">
             See more
           </a>
         </div>
@@ -143,7 +145,7 @@ export default function Home() {
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Herbs & Spices
           </h6>
-          <a href="/" className="text-green-600 underline">
+          <a href="/" className="text-green-600 underline pr-4 sm:pr-0">
             See more
           </a>
         </div>
