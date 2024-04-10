@@ -57,7 +57,7 @@ export default function Home() {
       </div>
 
       {/* category container  */}
-      <section className="flex gap-4 w-full h-64 items-center justify-center">
+      <section className="flex flex-wrap gap-4 w-full h-full my-8 items-center justify-center">
         {categoryAssets.map((item, index) => (
           <div className="flex flex-col jutify-center items-center gap-2 hover:scale-110 cursor-pointer transition-all duration-100">
             <img src={item.imgUrl} alt="category" className="w-28" />
@@ -66,7 +66,7 @@ export default function Home() {
         ))}
       </section>
       {/* best selling section */}
-      <section className="flex flex-col w-3/4 mx-auto">
+      <section className="flex sm:w-3/4 pl-4 flex-col mx-auto">
         <div className="flex justify-between items-start mb-8">
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Best Selling
@@ -75,7 +75,7 @@ export default function Home() {
             See more
           </a>
         </div>
-        <div className="flex gap-4 w-full">
+        <div className="flex gap-4 w-full overflow-x-auto overflow-y-hidden">
           {BestSellingProducts.map((product, index) => (
             <Card
               id={index.toString()}
@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       {/* Banner section */}
-      <div className="flex w-3/4 pt-20 mx-auto gap-8 text-white">
+      <div className="flex sm:w-3/4 pl-4 pt-20 mx-auto gap-8 text-white ">
         <div className="relative w-2/3 p-8 bg-yellow-400 h-64  rounded-2xl overflow-hidden">
           <p className="font-bold text-4xl capitalize mb-4">
             Special Deals on <br /> herbs & Spices
@@ -117,7 +117,7 @@ export default function Home() {
       </div>
 
       {/* best grocery section */}
-      <section className="flex flex-col w-3/4 mx-auto mt-20">
+      <section className="flex flex-col sm:w-3/4 pl-4 mx-auto mt-20">
         <div className="flex justify-between items-start mb-8">
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Grocery
@@ -126,7 +126,7 @@ export default function Home() {
             See more
           </a>
         </div>
-        <div className="flex gap-4 w-full">
+        <div className="flex gap-4 w-full h-full overflow-x-auto overflow-y-hidden">
           {BestSellingProducts.map((product, index) => (
             <Card
               id={index.toString()}
@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </section>
       {/* best grocery section */}
-      <section className="flex flex-col w-3/4 mx-auto mt-20">
+      <section className="flex flex-col sm:w-3/4 pl-4 mx-auto mt-20">
         <div className="flex justify-between items-start mb-8">
           <h6 className="px-2 font-bold text-2xl border-l-8 border-green-600">
             Herbs & Spices
@@ -147,7 +147,7 @@ export default function Home() {
             See more
           </a>
         </div>
-        <div className="flex gap-4 w-full">
+        <div className="flex gap-4 w-full overflow-x-auto overflow-y-hidden">
           {BestSellingProducts.map((product, index) => (
             <Card
               id={index.toString()}

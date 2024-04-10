@@ -21,14 +21,14 @@ const Card = ({
     >
       <img src={image} alt={title} className="w-full rounded-lg" />
       <h6 className="font-bold py-4 h-2/4">{title}</h6>
-      <div className="flex justify-between items-center w-full self-end">
-        <p className="font-bold text-xl text-green-600">$ {price}</p>
+      <div className="flex justify-between items-center w-full gap-2 self-end">
+        <p className="font-bold text-xd sm:text-xl text-green-600">${price}</p>
         <a
           href={""}
           className={buttonVariants({
             variant: "outline",
             className:
-              "w-20 h-8 border-1  border-green-700 text-green-700 hover:bg-green-800 hover:text-green-200 ",
+              "w-16 sm:w-20 h-8 border-1   border-green-700 text-green-700 hover:bg-green-800 hover:text-green-200 ",
           })}
         >
           Add item
